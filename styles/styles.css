@@ -1,0 +1,24 @@
+/* No CSS *//*# sourceMappingURL=styles.css.map */
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    
+    align-items: center;
+    
+}
+.gps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+.lycos{
+    border:none;
+    padding-left: 20px;
+}
+
+
+
