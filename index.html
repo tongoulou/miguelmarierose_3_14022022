@@ -1,58 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="FR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/a7ceca3ac9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/a7ceca3ac9.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
+    
+
     
 </head>
 <body>
 <header>
     <div id="logo"> 
-<img src="images\logo\ohmyfood.png" alt="logo">
+<p>ohmyfood</p>
     </div>
     <div class="gps">
         <i class="fas fa-map-marker-alt icone-gps"></i>
-                    <input type="search" placeholder="Paris,Belleville" class="lycos">
-    </div>
+        <input type="search" placeholder="Paris,Belleville" class="lycos">
+                    </div>
+    <div class="sousgps">
     <h2>Réservez le menu qui vous convient</h2>
     <p> Découvrez des restaurants d'exception, séléctionés par nos soins</p>
     <a class="explorer">Explorer nos rerstaurants</a>
+    </div>
 </header>
 <main>
     
     <nav> 
-        <div class="fonctionement">
-        <h2>Fonctionnement</h2>
-            <ol>
-                <li>Choisissez un restaurant</li>
-                <li>Composez votre menu</li>
-                <li>deguster au restaurant</li>
-            </ol>
+        <div class="fonctionement" id="fonct">
+        <h2><strong>Fonctionnement</strong></h2>
+            <ul>
+                <li class="list">Choisissez un restaurant</li>
+                <li class="list">Composez votre menu</li>
+                <li class="list">deguster au restaurant</li>
+            </ul>
         </div>
 
     </nav>
     <section class="container1" id="container1">
         <div class="restaurant">
                <h2 class="titre-restaurant"> restaurant </h2>                 
-                   <a href="lapalettedugout.html">
-                       <div>
-                           <img  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout">
-                           <span class="new">Nouveau</span>                       
-                           <h3 class="rest">La palette du gout</h3>
-                           <p>Ménilmontant</p>
-                           <span class="coeur">
-                            <i class="fa-regular fa-heart"></i>
-                            </span>
-                       </div>
+               <div class="boxrest">
+                    <a href="lapalettedugout.html">
+                       
+                            <div class="img">
+                                <img  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout">
+                                <div class="new">Nouveau</div> 
+                            </div> 
+                            <div>                    
+                                <h3 class="rest">La palette du gout</h3>
+                                <p>Ménilmontant</p>
+                        
+                                    <div class="coeur">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                            </div>
+                       
                    </a>  
-                   
+                </div>  
                        
                    
         </div>
