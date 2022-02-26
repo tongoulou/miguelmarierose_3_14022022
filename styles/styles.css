@@ -20,6 +20,7 @@ header{
     height: 450px; 
     
 }
+
 #logo{
     display:flex;
     justify-content: center;
@@ -183,7 +184,7 @@ nav li
     align-items: center;
     width: 90px;
     height: 30px;
-    background-color: aquamarine;
+    background-color: #99E2D0;
     position:relative;
     bottom: 145px; left: 230px;
 
@@ -202,6 +203,14 @@ footer > li > a{
 }
 footer >span{
     font-family : 'Shrikhand', cursive ;
+}
+
+.patille1{
+    display: flex;
+    margin:5px;
+    background-color: #9356DC;
+    border-radius: 100px;
+    color:black;
 }
 
 /*pages restaurant*/
