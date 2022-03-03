@@ -16,9 +16,12 @@ header{
     flex-direction: column;
     
     background-color:#F2F2F2;
-    max-width: 100%;
+    width: 100%;
     height: 450px; 
     
+}
+main{
+    width: 100%;
 }
 h1{
     font-family : 'Shrikhand', cursive ;
@@ -110,8 +113,8 @@ nav li
     display: flex;
     align-items:center;
     
-    width: 300px;
-    height: 70px;	 
+    width:330px;
+    height: 60px;	 
 	border-radius:25px;
     background-color: #F2F2F2;
     margin-bottom: 25px;
@@ -133,7 +136,7 @@ nav li
     background-color: #F2F2F2;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 100%;
     height:1130px;
     justify-content: center;   
 }
@@ -200,6 +203,7 @@ nav li
 
 }
 footer{
+    width: 100%;
     background-color: #353535;
     color:white;
 }
@@ -208,12 +212,16 @@ footer li {
     list-style: none;
     text-decoration: none;
 }
-footer > li > a{
+footer >ul > li > a{
     text-decoration: none;
+    color:white;
 }
 footer >span{
     font-family : 'Shrikhand', cursive ;
+    margin-left:40px;
+    
 }
+
 
 .patille{
     display: flex;
@@ -233,36 +241,80 @@ footer >span{
 .iconefonc{
 padding-right: 5px;
 }
-.iconefonc:hover{
+.coeur > .coeur-blanc
+{
+    position: absolute;
+    
+}
+.coeur > .coeur-color{
+    position: absolute;
+}
+
+.coeur-color{
+   opacity: 0;
+  background-color: linear-gradient(#9356DC,#FF79DA);
+}
+.coeur-color:hover{
+    opacity:1;
+
+}
+
+    /*.iconefonc:hover{
     color: #9356DC;
 }
 .fa-heart:hover{
     
-    color:#FF79DA;
+    
     color: linear-gradient(339deg,#9356DC,#FF79DA);
 
 }
-/*.coeur{
+.coeur-color:hover{
+   
+    display:none;
+
+}
+
+
+.coeur-blanc{
     display: flex;
-    position:absolute;
-    mix-blend-mode:screen ;
+    position:relative;
+    left:0px; top:17px;
+    
+}*/
+/*.coeur{
+    mix-blend-mode: difference;
 }*/
 
 /*pages restaurant*/
 
     
-
+body{
+    display:flex;
+    flex-direction: column;
+}
 
 
 .teterestaurant{
-    display:flex;
+    
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+   
+
+    
 background-color: white;
+}
+.fleche-index{
+    display: flex;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    color:black;
 }
 .img-restaurant{
     max-width: 1445px;
+    
+    
+    
+
 }
 .imgrestau{
     background: transparent;
@@ -271,9 +323,38 @@ height:400px;
 object-fit: cover;
 }
 .container{
-    background-color: grey;
-    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -130px;
+    width: 100%;
+    background-color: #F2F2F2;
+    border-radius: 45px 45px 0px 0px;
+    
 }
+.container li{
+    display: flex;
+    align-items:center;
+    
+    width:88%;
+    height: auto; 
+	border-radius:15px;
+    background-color: white;
+    margin-bottom: 25px;
+    list-style-type: none;
+    align-items: center;
+    box-shadow: 0 0px 10px 0px rgb(170,170,170); 
+
+}
+.container ul{
+    padding-inline-start:15px;
+}
+.container >h2{
+    border-bottom: 2px solid green;
+}
+/*.entrees {
+    padding-left: 7px;
+}*/
 .button-commande{
     width: 200px;
     border: 0;
@@ -286,3 +367,43 @@ object-fit: cover;
     
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
 }
+.button-commande{
+    display:flex;
+    justify-content: center;
+   
+}
+.button-comm{
+    display:flex;
+    justify-content: center;
+    margin:40px 0px 60px 0px;
+
+}
+.titrerest{
+    display:flex;
+    justify-content:space-around;
+    font-size: 13px;
+    align-items: center;
+    margin-left: -17px;
+}
+.list2{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    
+}
+.list2  p{
+    margin: 0px;
+}
+.icone-choix{
+    background-color: #99E2D0;
+    padding:2%;
+    margin: -5px;
+    
+
+}
+/*@media screen and (max-width: 819px) {
+    .contaire1
+    {
+        display:flex;
+        justify-content: space-between;
+    }*/
