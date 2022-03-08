@@ -380,10 +380,11 @@ object-fit: cover;
 }
 .titrerest{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
     font-size: 13px;
     align-items: center;
     margin-left: -17px;
+    padding: 35px;
 }
 .list2{
     display:flex;
@@ -394,10 +395,12 @@ object-fit: cover;
 .list2  p{
     margin: 0px;
 }
-.icone-choix{
+.icone-choix:hover{
     background-color: #99E2D0;
-    padding:2%;
-    margin: -5px;
+    padding:29px;
+    margin: -12px;
+    border-radius: 0px 15px 15px 0px;
+    
     
 
 }
