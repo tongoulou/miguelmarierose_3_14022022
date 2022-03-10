@@ -397,6 +397,7 @@ object-fit: cover;
     display:flex;
     justify-content: space-between;
     padding:10px;
+    cursor: pointer;
     
 }
 .list2  p{
@@ -407,14 +408,26 @@ object-fit: cover;
 }
 .fa-check  {
     display:none;
+    background-color: white;
+    padding: 3px;
+    border-radius: 200px;
+    transform: rotate(180deg);
+    
+    
+}
+.fa-check:hover {
+    transform: rotate(0);
+    transition-duration: .9s;
 }
 .icone-choix:hover{
     opacity: 1;
     display:inline-block;
     background-color: #99E2D0;
-    padding:25px;
+    padding:22px;
     margin: -12px;
     border-radius: 0px 15px 15px 0px;
+    transition-duration: 0.9s;
+    
     
     
 
