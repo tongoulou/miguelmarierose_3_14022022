@@ -78,6 +78,12 @@ li
     cursor: pointer;
     
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
+    /*&:hover{
+    
+        transition-duration: 0.90s;
+        box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
+    
+    }*/
 }
 .explorer:hover{
     
@@ -241,6 +247,11 @@ footer >span{
 .iconefonc{
 padding-right: 5px;
 }
+.coeur{
+    position:relative;
+    right: 20px; bottom:10px;
+    
+}
 .coeur > .coeur-blanc
 {
     position: absolute;
@@ -259,8 +270,12 @@ padding-right: 5px;
 
 .coeur-color:hover{
     opacity:1;
-
-linear-gradient:(#9356DC,#FF79DA);
+    background-image:linear-gradient(#9356DC,#FF79DA);
+    background-size: contain;
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
 }
 
     
@@ -316,10 +331,11 @@ object-fit: cover;
 .container li{
     padding-left: 10px;
     display:flex;
+    
     align-items:center;
-    justify-content: space-between;
+   cursor: pointer;
     width:88%;
-    max-width: 350px;
+    /*max-width: 650px;*/
     height: 60px; 
 	border-radius:15px;
     background-color: white;
@@ -332,6 +348,10 @@ object-fit: cover;
     overflow: hidden;
 
 }
+.containet li:hover + .icone-choix{
+    content:"";
+    
+}
 .container ul{
     display: flex;
     justify-content:center;
@@ -341,11 +361,14 @@ object-fit: cover;
   
 }
 .container >h2{
-    /*border-bottom: thick solid #99E2D0;*/
-    border-width: 10px;
+    
+  margin-left: 20px; 
 }
 .entrees {
-    padding-left: 7px;
+    padding: 7px;
+}
+.sous{
+    margin-left:15px;
 }
 .sous:after{
     background-color: #99e2d0;
@@ -355,6 +378,7 @@ object-fit: cover;
     content: "";
     width: 65px;
     height: 5px;
+    margin-left:15px;
     
     
     
@@ -409,20 +433,15 @@ object-fit: cover;
 
     
 
-#list2 >div>h4  {
-    
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+
 .prix{
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-left: 70px;
+   
+    margin-left:auto;
+    padding-right: 5px;
     cursor: pointer;
     
-    /*padding-right: 60px;*/
+    
+    
    
     
    
@@ -445,13 +464,13 @@ object-fit: cover;
     color: #99E2D0;
     padding: 3px;
     border-radius: 200px;
-    transform: rotate(0.5turn);
+    /*transform: rotate(0.5turn);*/
     
     
 }
 .fa-check:hover {
     transform: rotate(0);
-    transition-duration: .5s;
+    transition-duration: .12s;
 }
 
 
@@ -464,12 +483,7 @@ object-fit: cover;
     background-color: #99E2D0;
     padding: 9%;   
     border-radius: 0px 15px 15px 0px;
-    transition-duration: 0.3s;
-    /*animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    animation-fill-mode: both;
-    transform: scale(0);
-    max-width: 100%;*/
+    transition-duration: 0.5s;
     
     
     
