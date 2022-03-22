@@ -144,7 +144,8 @@ nav li
     flex-wrap: wrap;
     max-width: 100%;
     height:1130px;
-    justify-content: center;   
+    justify-content:center;
+      
 }
 
 .img{
@@ -152,6 +153,7 @@ nav li
     height: 154px
 }
 #rest {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -259,7 +261,7 @@ padding-right: 5px;
 }
 .coeur > .coeur-color{
     position: absolute;
-    /*background-image:linear-gradient(#9356DC,#FF79DA);*/
+    
 }
 
 .coeur-color{
@@ -270,12 +272,10 @@ padding-right: 5px;
 
 .coeur-color:hover{
     opacity:1;
-    background-image:linear-gradient(#9356DC,#FF79DA);
-    background-size: contain;
-    display: block;
-    height: 50px;
-    width: 50px;
-    position: relative;
+    transition-duration: 0.90s; 
+    background: linear-gradient(339deg,#9356DC,#FF79DA);
+    -webkit-background-clip: text;
+    color: transparent;      
 }
 
     
@@ -348,11 +348,28 @@ object-fit: cover;
     overflow: hidden;
 
 }
-.containet li:hover + .icone-choix{
-    content:"";
+.containet li:hover {
     
-}
+    cursor: pointer;}
+    .icone-choix:hover{
+    
+        opacity: 1;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #99E2D0;
+        padding: 9%;   
+        border-radius: 0px 15px 15px 0px;
+        transition-duration: 0.5s;
+        
+        
+        
+    
+    }
+
+
 .container ul{
+
     display: flex;
     justify-content:center;
     flex-direction: column;
@@ -464,13 +481,13 @@ object-fit: cover;
     color: #99E2D0;
     padding: 3px;
     border-radius: 200px;
-    /*transform: rotate(0.5turn);*/
+    transform: rotate(0)
     
     
 }
 .fa-check:hover {
-    transform: rotate(0);
-    transition-duration: .12s;
+    transform: rotate(1turn);
+    transition-duration: 1s;
 }
 
 
