@@ -10,7 +10,50 @@ body {
     
     align-items: center;
     }
+.chargement{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white ;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    animation: loader 1s ease-in-out 3s forwards;
 
+}
+@keyframes loader {
+    0%{opacity: 1;}
+    50%{opacity: 0.5;}
+    100%{opacity: 0;}
+    
+}
+.spinner{
+   
+    
+    position: absolute;
+    bottom: 50%;
+    left: 47%;
+    border: 10px solid #9356DC; 
+    border-top: 10px solid #FF79DA; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    /*visibility: hidden;*/
+  
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 header{
     display:flex;
     flex-direction: column;
@@ -23,6 +66,11 @@ header{
 main{
     width: 100%;
 }
+
+  
+  
+
+  
 h1{
     font-family : 'Shrikhand', cursive ;
 }
@@ -275,7 +323,9 @@ padding-right: 5px;
     transition-duration: 0.90s; 
     background: linear-gradient(339deg,#9356DC,#FF79DA);
     -webkit-background-clip: text;
-    color: transparent;      
+    color: transparent;
+    font-weight: bold;
+          
 }
 
     
@@ -405,6 +455,18 @@ object-fit: cover;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+.list2{
+    animation: affichage 4s ;
+}
+@keyframes affichage {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 
 .platentrée{
