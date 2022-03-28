@@ -15,16 +15,16 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: white ;
+    background-color: rgb(255, 255, 255);
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     top: 0;
     left: 0;
     pointer-events: none;
-    animation: loader 1s ease-in-out 3s forwards;
+    animation: chargement 2s ease-in-out 3s forwards;
 
 }
-@keyframes loader {
+@keyframes chargement {
     0%{opacity: 1;}
     50%{opacity: 0.5;}
     100%{opacity: 0;}
@@ -35,14 +35,14 @@ body {
     
     position: absolute;
     bottom: 50%;
-    left: 47%;
+    left: 40%;
     border: 10px solid #9356DC; 
     border-top: 10px solid #FF79DA; 
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 2s linear infinite;
-    /*visibility: hidden;*/
+    
   
 }
 @-webkit-keyframes spin {
@@ -81,6 +81,7 @@ h1{
     justify-content: center;
     background-color: white;
     font-family : 'Shrikhand', cursive ;
+    
 }
 li
 {
@@ -93,8 +94,9 @@ li
     justify-content: center;
 	align-items:center;
 	border:none; 
-    background-color: #d4d3d3;
+    background-color: #ebebeb;
     height: 50px;
+    box-shadow: 0px 0px 5px 0px rgb(138, 137, 137);
     
     }
     .icone-gps{
@@ -126,12 +128,6 @@ li
     cursor: pointer;
     
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
-    /*&:hover{
-    
-        transition-duration: 0.90s;
-        box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
-    
-    }*/
 }
 .explorer:hover{
     
@@ -161,6 +157,10 @@ nav {
 }
 #nav{
     padding-left: 0px;
+    flex-flow: row wrap;
+   
+    display: flex;
+    justify-content: center;
 }
 nav li
 {
@@ -171,10 +171,13 @@ nav li
     height: 60px;	 
 	border-radius:25px;
     background-color: #F2F2F2;
-    margin-bottom: 25px;
+    margin: 25px;
     list-style-type: none;
     align-items: center;
     box-shadow: 0 0px 10px 0px rgb(170,170,170);    
+}
+.titrefonct >h2 {
+    margin-left:20px;
 }
 .fonctionement ul li:hover 
 {
@@ -189,10 +192,12 @@ nav li
 .container1{
     background-color: #F2F2F2;
     display: flex;
-    flex-wrap: wrap;
+    padding-bottom: 25px;
     max-width: 100%;
-    height:1130px;
+    
     justify-content:center;
+    
+    align-content: center;
       
 }
 
@@ -221,7 +226,7 @@ nav li
 }
 
 .boxrest{
-    
+   
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -262,6 +267,7 @@ footer{
     width: 100%;
     background-color: #353535;
     color:white;
+    
 }
 footer li {
     color:white;
@@ -299,7 +305,7 @@ padding-right: 5px;
 }
 .coeur{
     position:relative;
-    right: 20px; bottom:10px;
+  right: 24px; bottom:10px;
     
 }
 .coeur > .coeur-blanc
@@ -327,7 +333,9 @@ padding-right: 5px;
     font-weight: bold;
           
 }
-
+.coeur-blanc:hover{
+    background-image: white;
+}
     
 
 /*pages restaurant*/
@@ -371,7 +379,7 @@ object-fit: cover;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: -130px;
+    margin-top: -91px;
  
     width: 100%;
     background-color: #F2F2F2;
@@ -385,7 +393,6 @@ object-fit: cover;
     align-items:center;
    cursor: pointer;
     width:88%;
-    /*max-width: 650px;*/
     height: 60px; 
 	border-radius:15px;
     background-color: white;
@@ -401,21 +408,7 @@ object-fit: cover;
 .containet li:hover {
     
     cursor: pointer;}
-    .icone-choix:hover{
-    
-        opacity: 1;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #99E2D0;
-        padding: 9%;   
-        border-radius: 0px 15px 15px 0px;
-        transition-duration: 0.5s;
-        
-        
-        
-    
-    }
+
 
 
 .container ul{
@@ -456,17 +449,36 @@ object-fit: cover;
     overflow: hidden;
     white-space: nowrap;
 }
+
 .list2{
-    animation: affichage 4s ;
+    animation: affichage 3s ease-out;
+   
+}
+.list3{
+    
+    
+    animation: affichage 6s ease-out;
+    
+
+}
+.list4{
+    
+    animation: affichage 8s ease-out;
+    
+
+}.list5{
+    
+    animation: affichage 10s ease-out;
+    
+
 }
 @keyframes affichage {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+    100% {
         opacity: 1;
-    }
-    
+    }   
 }
 
 .platentrée{
@@ -525,37 +537,24 @@ object-fit: cover;
     
    
 }
+
 .icone-choix{
     opacity:0;
     cursor: pointer;
     display:none;
+    
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     
-}
-
-.fa-check  {
-    position: absolute;
-    
-    background-color: white;
-    color: #99E2D0;
-    padding: 3px;
-    border-radius: 200px;
-    transform: rotate(0)
-    
     
 }
-.fa-check:hover {
-    transform: rotate(1turn);
-    transition-duration: 1s;
-}
-
-
-.icone-choix:hover{
+  
+.list2:hover > .icone-choix {
     
     opacity: 1;
+    width: 50px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -563,15 +562,83 @@ object-fit: cover;
     padding: 9%;   
     border-radius: 0px 15px 15px 0px;
     transition-duration: 0.5s;
-    
-    
-    
-
 }
+.list3:hover > .icone-choix {
+    
+    opacity: 1;
+    width: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    padding: 9%;   
+    border-radius: 0px 15px 15px 0px;
+    transition-duration: 0.5s;
+}
+.list4:hover > .icone-choix {
+    
+    opacity: 1;
+    width: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    padding: 9%;   
+    border-radius: 0px 15px 15px 0px;
+    transition-duration: 0.5s;
+}
+.fa-check  {
+        position: absolute;
+        
+        background-color: white;
+        color: #99E2D0; 
+        padding: 3px;
+        border-radius: 200px;
+        /*transform: rotate(1turn);
+        transition-duration: 2s;*/
+} 
+.list2:hover  .fa-check {
+    transform: rotate(360deg);
+    transition-duration: 0.75s;
+}
+.list3:hover  .fa-check {
+    transform: rotate(360deg);
+    transition-duration: 0.75s;
+}
+.list4:hover  .fa-check {
+    transform: rotate(360deg);
+    transition-duration: 0.75s;
+}
+/*  
+.fa-check {
+    transform: rotate(0turn);
+    transition-duration: 5s;
+}  */     
+        
+   
 
-/*@media screen and (max-width: 819px) {
-    .contaire1
-    {
-        display:flex;
-        justify-content: space-between;
-    }*/
+
+
+
+
+@media screen and (min-width: 819px) {
+    .restaurant
+    {  
+        display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+   
+    width: 60%;
+}
+.restaurant h2{
+    text-align:center;
+}
+    
+    .titre-restaurant{
+        width: 100%;
+    }
+
+    .titrefonct h2{
+        text-align: center;
+    }
+}
