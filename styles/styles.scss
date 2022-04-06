@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto & display=swap');
+@import ".sass/utils/variables";
+
+@mixin gradient {background-image: linear-gradient(339deg,$coul-prim,$coul-secon);
+    
+
+    
+
 body {
     width: 100%;
     margin: 0px;
@@ -8,6 +15,7 @@ body {
     font-family : 'Roboto', sans-serif;
     align-items: center;
     }
+
 .chargement{
     width: 100%;
     height: 100%;
@@ -20,35 +28,34 @@ body {
     left: 0;
     pointer-events: none;
     animation: chargement 2s ease-in-out 3s forwards;
-
-}
-@keyframes chargement {
-    0%{opacity: 1;}
-    50%{opacity: 0.5;}
-    100%{opacity: 0;}    
-}
-.spinner{
-    
-    position: absolute;
-    bottom: 50%;
-    left: 40%;
-    border: 10px solid #9356DC; 
-    border-top: 10px solid #FF79DA; 
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-     
-}
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
+        @keyframes chargement {
+        0%{opacity: 1;}
+        50%{opacity: 0.5;}
+        100%{opacity: 0;}    
+        }
+            .spinner{
+                
+                position: absolute;
+                bottom: 50%;
+                left: 40%;
+                border: 10px solid $coul-prim; 
+                border-top: 10px solid $coul-secon; 
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 2s linear infinite;
+                
+            }
+                @-webkit-keyframes spin {
+                    0% { -webkit-transform: rotate(0deg); }
+                    100% { -webkit-transform: rotate(360deg); }
+                }
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+}
 header{
     display:flex;
     flex-direction: column;
@@ -108,20 +115,21 @@ li
     border: 0;
     padding: 15px 25px;
     border-radius: 100px;
-    color:white;
-    background-color: #686868;
-    background-image: linear-gradient(339deg,#9356DC,#FF79DA);
+    color:white;    
+    @include gradient;
     cursor: pointer;
     
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
+   
+        &:__hover{
+            
+            transition-duration: 0.90s;
+            box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
+            background-color: #fbf9f9;
+            /*filter:brightness(150%);*/
+                 
+        }
 }
-.explorer:hover{
-    
-    transition-duration: 0.90s;
-    box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
-
-}
-
 .imgacc{
     max-width: 1445px;
     height: 100px;
@@ -130,43 +138,49 @@ nav {
     display: flex;
     justify-content: center;
 }
-.nav ul
-{
-    display:flex;
-	padding-left:0px;
- 
-}
-#nav{
-    padding-left: 0px;
-    flex-flow: row wrap;
-   
-    display: flex;
-    justify-content: center;
-}
-nav li
-{
-    display: flex;
-    align-items:center;
+
+    .fonctionement ul
+    {
+        display:flex;
+        padding-left:0px;
+        flex-direction: column;
     
-    width:330px;
-    height: 60px;	 
-	border-radius:25px;
-    background-color: #F2F2F2;
-    margin: 25px;
-    list-style-type: none;
-    align-items: center;
-    box-shadow: 0 0px 10px 0px rgb(170,170,170);    
-}
+        li
+        {
+            display: flex;
+            align-items:center;
+            
+            width:330px;
+            height: 60px;	 
+            border-radius:25px;
+            background-color: #F2F2F2;
+            margin: 25px;
+            list-style-type: none;
+            align-items: center;
+            box-shadow: 0 0px 10px 0px rgb(170,170,170); 
+            
+                &:hover 
+                    {
+                        cursor: pointer;
+                        background: #f0c0e1;
+                        transition-duration: 0.90s;
+                        
+                    }
+        }
+        
+    }
+                    >#nav{
+                        padding-left: 0px;
+                        flex-flow: row wrap;
+                    
+                        display: flex;
+                        justify-content: center;
+                    }
+
 .titrefonct >h2 {
     margin-left:20px;
 }
-.fonctionement ul li:hover 
-{
-    cursor: pointer;
-    background: #f0c0e1;
-    transition-duration: 0.90s;
-    
-}
+
 #fonct {
     padding: 0px;
 }
@@ -193,41 +207,40 @@ nav li
     align-items: center;
     margin: 20px 10px 0px 10px
 }
-.boxrest a > div > .rest >h3{
-
-    margin:0px; 
-}
-.boxrest a > div >.rest >p {
-    margin:0px;
-
-}
 
 .boxrest{
    
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: space-between;
-}
-.boxrest >a
-{
-    width: 340px;
-	height: 235px;
-    border-radius: 20px;
-    margin-top: 20px;
-    background-color: white;
-    text-decoration: none;
-    color : black;
-   
-    box-shadow: 0 0px 10px 0px rgb(170,170,170);
-}
-.boxrest > a > div > img
-{
-    width: 100%;
-    height: 155px;
-    border-radius: 20px 20px 0 0;
-    object-fit: cover;
+    
+
+        >a{
+            width: 340px;
+            height: 235px;
+            border-radius: 20px;
+            margin-top: 20px;
+            background-color: white;
+            text-decoration: none;
+            color : black;
+            box-shadow: 0 0px 10px 0px rgb(170,170,170);
+        }
+                > a > div > img{
+                    width: 100%;
+                    height: 155px;
+                    border-radius: 20px 20px 0 0;
+                    object-fit: cover;
+                }
+                        > a > div > .rest >h3{
+
+                            margin:0px; 
+                        }
+                            >a > div >.rest >p {
+                                margin:0px;
+
+                            }
+
 }
 .new{
     display: flex;
@@ -235,7 +248,7 @@ nav li
     align-items: center;
     width: 90px;
     height: 30px;
-    background-color: #99E2D0;
+    background-color: $vert;
     position:relative;
     bottom: 145px; left: 230px;
 
@@ -244,23 +257,24 @@ footer{
     width: 100%;
     background-color: #353535;
     color:white;
-    
-}
-footer li {
-    color:white;
-    list-style: none;
-    text-decoration: none;
-}
-footer >ul > li > a{
-    text-decoration: none;
-    color:white;
-}
-footer >span{
-    font-family : 'Shrikhand', cursive ;
-    margin-left:40px;
-    
-}
+    >span{
+        font-family : 'Shrikhand', cursive ;
+        margin-left:40px;
+        
+    }
 
+        li {
+            color:white;
+            list-style: none;
+            text-decoration: none;
+        }
+
+            >ul > li > a{
+                text-decoration: none;
+                color:white;
+            }
+                
+}
 .patille{
     display: flex;
     justify-content: center;
@@ -270,7 +284,7 @@ footer >span{
     margin:10px;
     width: 3px;
     height: 3px;
-    background-color: #9356DC;
+    background-color: $coul-prim;
     border-radius: 200px;
     color:white;
     position:relative;
@@ -283,34 +297,34 @@ padding-right: 5px;
     position:relative;
   right: 24px; bottom:10px;
     
-}
-.coeur > .coeur-blanc
-{
-    position: absolute;
-    
-}
-.coeur > .coeur-color{
-    position: absolute;
-    
+
+    > .coeur-blanc
+    {
+        position: absolute;
+            &:hover{
+                background: white;
+            } 
+    }
+        > .coeur-color{
+            position: absolute;
+            
+        }
 }
 
 .coeur-color{
    opacity: 0;
     
+        &:hover{
+            opacity:1;
+            transition-duration: 0.90s; 
+            @include gradient;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bold;
+                
+        }
 }
 
-.coeur-color:hover{
-    opacity:1;
-    transition-duration: 0.90s; 
-    background: linear-gradient(339deg,#9356DC,#FF79DA);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-          
-}
-.coeur-blanc:hover{
-    background: white;
-}
     
 
 /*pages restaurant*/
@@ -337,13 +351,14 @@ background-color: white;
 .img-restaurant{
     max-width: 1445px;
 
-}
+
 .imgrestau{
     background: transparent;
 width: 100%; 
 height:300px;
 object-fit: cover;
 }
+
 .container{
     display: flex;
     justify-content: center;
@@ -353,44 +368,45 @@ object-fit: cover;
     width: 100%;
     background-color: #F2F2F2;
     border-radius: 45px 45px 0px 0px;
-    
-}
-.container li{
-    padding-left: 10px;
-    display:flex;
-    
-    align-items:center;
-   cursor: pointer;
-    width:88%;
-    height: 60px; 
-	border-radius:15px;
-    background-color: white;
-    margin-bottom: 25px;
-    list-style-type: none;
-    align-items: center;
-    box-shadow: 0 0px 10px 0px rgb(170,170,170); 
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+            ul{
 
-}
-.containet li:hover {
-    
-    cursor: pointer;}
+                display: flex;
+                justify-content:center;
+                flex-direction: column;
+                align-items: center;
+                padding-left:0px;
+                li{
+                    padding-left: 10px;
+                    display:flex;              
+                    align-items:center;
+                    cursor: pointer;
+                        width:88%;
+                        height: 60px; 
+                        border-radius:15px;
+                        background-color: white;
+                        margin-bottom: 25px;
+                        list-style-type: none;
+                        align-items: center;
+                        box-shadow: 0 0px 10px 0px rgb(170,170,170); 
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
 
-.container ul{
+            &:hover {
+            
+                cursor: pointer;}
 
-    display: flex;
-    justify-content:center;
-    flex-direction: column;
-    align-items: center;
-    padding-left:0px;
-  
-}
-.container >h2{
+
+            
+            }
+
+    >h2{
     
-  margin-left: 20px; 
+        margin-left: 20px; 
+      }
 }
+
+
 .entrees {
     padding: 7px;
 }
@@ -398,7 +414,7 @@ object-fit: cover;
     margin-left:15px;
 }
 .sous:after{
-    background-color: #99e2d0;
+    background-color: $vert ;
     display: flex;
     position: absolute;
     left: 0;
@@ -449,16 +465,16 @@ object-fit: cover;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.button-commande{
+.button-commande{ 
     width: 200px;
     border: 0;
     padding: 15px 25px;
     border-radius: 100px;
     color:white;
     background-color: #686868;
-    background-image: linear-gradient(339deg,#9356DC,#FF79DA);
-    cursor: pointer;
     
+    @include gradient;
+    cursor: pointer;  
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
 }
 .button-commande{
@@ -498,78 +514,66 @@ object-fit: cover;
     align-items: center;
     justify-content: center;
 }
-  
-.list2:hover > .icone-choix {
-    
+@mixin hover-icon ($vert) {
     opacity: 1;
     width: 50px;
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: #99E2D0;
     padding: 9%;   
     border-radius: 0px 15px 15px 0px;
     transition-duration: 0.5s;
+    
+}
+.list2:hover > .icone-choix {
+    
+    @include hover-icon;
 }
 .list3:hover > .icone-choix {
     
-    opacity: 1;
-    width: 50px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #99E2D0;
-    padding: 9%;   
-    border-radius: 0px 15px 15px 0px;
-    transition-duration: 0.5s;
+    @include hover-icon;
 }
 .list4:hover > .icone-choix {
     
-    opacity: 1;
-    width: 50px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #99E2D0;
-    padding: 9%;   
-    border-radius: 0px 15px 15px 0px;
-    transition-duration: 0.5s;
+    @include hover-icon;
 }
 .fa-check  {
         position: absolute;
         
         background-color: white;
-        color: #99E2D0; 
+        color: $vert; 
         padding: 3px;
         border-radius: 200px;
 
 } 
-.list2:hover  .fa-check {
+
+@mixin hover-fa {
+    
     transform: rotate(360deg);
     transition-duration: 0.75s;
+}
+.list2:hover  .fa-check {
+    @include hover-fa;
 }
 .list3:hover  .fa-check {
-    transform: rotate(360deg);
-    transition-duration: 0.75s;
+    @include hover-fa;
 }
 .list4:hover  .fa-check {
-    transform: rotate(360deg);
-    transition-duration: 0.75s;
+    @include hover-fa;
 }
 
 
-@media screen and (min-width: 819px) {
-    .restaurant
-    {  
-        display: flex;
+@media screen and (min-width: 819px) 
+{
+    .restaurant{  
+    display: flex;
     justify-content: space-around;
-    flex-flow: row wrap;
-   
+    flex-flow: row wrap;  
     width: 60%;
-}
-.restaurant h2{
-    text-align:center;
-}
+    }
+    .restaurant h2{
+        text-align:center;
+    }
     
     .titre-restaurant{
         width: 100%;
@@ -578,4 +582,5 @@ object-fit: cover;
     .titrefonct h2{
         text-align: center;
     }
+
 }
