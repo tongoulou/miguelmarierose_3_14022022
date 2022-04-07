@@ -139,10 +139,12 @@ nav {
     justify-content: center;
 
 
-    .fonctionement ul
+
+     ul
     {
-        display:flex;
+        
         padding-left:0px;
+        display:flex;
         flex-direction: column;
     
         li
@@ -475,7 +477,7 @@ object-fit: cover;
     border-radius: 100px;
     color:white;
     background-color: #686868;
-    
+    margin:40px 0px 60px 0px;
     @include gradient;
     cursor: pointer;  
     box-shadow: 0 0px 20px 0px rgb(170,170,170);
@@ -487,7 +489,7 @@ object-fit: cover;
 .button-comm{
     display:flex;
     justify-content: center;
-    margin:40px 0px 60px 0px;
+    background-color:#f2f2f2;
 
 }
 .titrerest{
@@ -516,13 +518,14 @@ object-fit: cover;
     align-items: center;
     justify-content: center;
 }
-@mixin hover-icon ($vert) {
+@mixin hover-icon  {
     opacity: 1;
     width: 50px;
     display:flex;
     align-items: center;
     justify-content: center;
-    padding: 9%;   
+    padding: 9%;
+    background-color: $vert;   
     border-radius: 0px 15px 15px 0px;
     transition-duration: 0.5s;
     
@@ -571,7 +574,7 @@ object-fit: cover;
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;  
-    width: 60%;
+    width: 100%;
     }
     .restaurant h2{
         text-align:center;

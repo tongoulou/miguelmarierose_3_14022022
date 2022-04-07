@@ -168,18 +168,19 @@ li {
   padding: 15px 25px;
   border-radius: 100px;
   color: white;
-  background-color: #686868;
   background-image: linear-gradient(339deg, #9356DC, #FF79DA);
   cursor: pointer;
   -webkit-box-shadow: 0 0px 20px 0px #aaaaaa;
           box-shadow: 0 0px 20px 0px #aaaaaa;
 }
 
-.explorer:hover {
+.explorer:__hover {
   -webkit-transition-duration: 0.90s;
           transition-duration: 0.90s;
   -webkit-box-shadow: 0 0px 20px 0px #383737;
           box-shadow: 0 0px 20px 0px #383737;
+  background-color: #fbf9f9;
+  /*filter:brightness(150%);*/
 }
 
 .imgacc {
@@ -196,18 +197,18 @@ nav {
           justify-content: center;
 }
 
-.fonctionement ul {
+nav ul {
+  padding-left: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.fonctionement ul li {
+nav ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,14 +226,14 @@ nav {
           box-shadow: 0 0px 10px 0px #aaaaaa;
 }
 
-.fonctionement ul li:hover {
+nav ul li:hover {
   cursor: pointer;
   background: #f0c0e1;
   -webkit-transition-duration: 0.90s;
           transition-duration: 0.90s;
 }
 
-> #nav {
+nav #nav {
   padding-left: 0px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -419,7 +420,7 @@ footer > ul > li > a {
   opacity: 1;
   -webkit-transition-duration: 0.90s;
           transition-duration: 0.90s;
-  background: linear-gradient(339deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(339deg, #9356DC, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
@@ -455,7 +456,7 @@ body {
   max-width: 1445px;
 }
 
-.img-restaurant .imgrestau {
+.imgrestau {
   background: transparent;
   width: 100%;
   height: 300px;
@@ -524,20 +525,20 @@ body {
   cursor: pointer;
 }
 
-.container ul > h2 {
+.container > h2 {
   margin-left: 20px;
 }
 
-.container .entrees {
+.entrees {
   padding: 7px;
 }
 
-.container .sous {
+.sous {
   margin-left: 15px;
 }
 
-.container .sous:after {
-  background-color: #99e2d0;
+.sous:after {
+  background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -549,29 +550,29 @@ body {
   margin-left: 15px;
 }
 
-.container .platentrée > p {
+.platentrée > p {
   margin: 3px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.container .list2 {
+.list2 {
   -webkit-animation: affichage 3s ease-out;
           animation: affichage 3s ease-out;
 }
 
-.container .list3 {
+.list3 {
   -webkit-animation: affichage 6s ease-out;
           animation: affichage 6s ease-out;
 }
 
-.container .list4 {
+.list4 {
   -webkit-animation: affichage 8s ease-out;
           animation: affichage 8s ease-out;
 }
 
-.container .list5 {
+.list5 {
   -webkit-animation: affichage 10s ease-out;
           animation: affichage 10s ease-out;
 }
@@ -594,46 +595,44 @@ body {
   }
 }
 
-.container .platentrée {
+.platentrée {
   display: block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.container .button-commande {
+.button-commande {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   border: 0;
   padding: 15px 25px;
   border-radius: 100px;
   color: white;
   background-color: #686868;
+  margin: 40px 0px 60px 0px;
   background-image: linear-gradient(339deg, #9356DC, #FF79DA);
   cursor: pointer;
   -webkit-box-shadow: 0 0px 20px 0px #aaaaaa;
           box-shadow: 0 0px 20px 0px #aaaaaa;
 }
 
-.container .button-commande {
+.button-comm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #f2f2f2;
 }
 
-.container .button-comm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 40px 0px 60px 0px;
-}
-
-.container .titrerest {
+.titrerest {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,13 +648,13 @@ body {
   padding: 35px;
 }
 
-.container .prix {
+.prix {
   margin-left: auto;
   padding-right: 5px;
   cursor: pointer;
 }
 
-.container .icone-choix {
+.icone-choix {
   opacity: 0;
   cursor: pointer;
   display: none;
@@ -671,7 +670,7 @@ body {
           justify-content: center;
 }
 
-.container .list2:hover > .icone-choix {
+.list2:hover > .icone-choix {
   opacity: 1;
   width: 50px;
   display: -webkit-box;
@@ -683,14 +682,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
   padding: 9%;
+  background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.container .list3:hover > .icone-choix {
+.list3:hover > .icone-choix {
   opacity: 1;
   width: 50px;
   display: -webkit-box;
@@ -702,14 +701,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
   padding: 9%;
+  background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.container .list4:hover > .icone-choix {
+.list4:hover > .icone-choix {
   opacity: 1;
   width: 50px;
   display: -webkit-box;
@@ -721,14 +720,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #99E2D0;
   padding: 9%;
+  background-color: #99E2D0;
   border-radius: 0px 15px 15px 0px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.container .fa-check {
+.fa-check {
   position: absolute;
   background-color: white;
   color: #99E2D0;
@@ -736,21 +735,21 @@ body {
   border-radius: 200px;
 }
 
-.container .list2:hover .fa-check {
+.list2:hover .fa-check {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 0.75s;
           transition-duration: 0.75s;
 }
 
-.container .list3:hover .fa-check {
+.list3:hover .fa-check {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 0.75s;
           transition-duration: 0.75s;
 }
 
-.container .list4:hover .fa-check {
+.list4:hover .fa-check {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 0.75s;
@@ -758,7 +757,7 @@ body {
 }
 
 @media screen and (min-width: 819px) {
-  .container .restaurant {
+  .restaurant {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -768,15 +767,15 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    width: 60%;
-  }
-  .container .restaurant h2 {
-    text-align: center;
-  }
-  .container .titre-restaurant {
     width: 100%;
   }
-  .container .titrefonct h2 {
+  .restaurant h2 {
+    text-align: center;
+  }
+  .titre-restaurant {
+    width: 100%;
+  }
+  .titrefonct h2 {
     text-align: center;
   }
 }
