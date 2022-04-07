@@ -174,13 +174,14 @@ li {
           box-shadow: 0 0px 20px 0px #aaaaaa;
 }
 
-.explorer:__hover {
+.explorer:hover {
   -webkit-transition-duration: 0.90s;
           transition-duration: 0.90s;
   -webkit-box-shadow: 0 0px 20px 0px #383737;
           box-shadow: 0 0px 20px 0px #383737;
   background-color: #fbf9f9;
-  /*filter:brightness(150%);*/
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
 }
 
 .imgacc {
@@ -620,6 +621,16 @@ body {
   cursor: pointer;
   -webkit-box-shadow: 0 0px 20px 0px #aaaaaa;
           box-shadow: 0 0px 20px 0px #aaaaaa;
+}
+
+.button-commande:hover {
+  -webkit-transition-duration: 0.90s;
+          transition-duration: 0.90s;
+  -webkit-box-shadow: 0 0px 20px 0px #383737;
+          box-shadow: 0 0px 20px 0px #383737;
+  background-color: #fbf9f9;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
 }
 
 .button-comm {
