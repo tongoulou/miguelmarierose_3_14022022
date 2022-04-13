@@ -1,23 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto & display=swap');
-@import "utils/_variables.scss";
+@import "../sass/utils/_variables.scss";
+@import "../sass/utils/_mixins.scss";
 
-@mixin gradient {background-image: linear-gradient(339deg,$coul-prim,$coul-secon);}
-@mixin hover-button  {&:hover {            
-    transition-duration: 0.90s;
-    box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
-    background-color: #fbf9f9;
-    filter:brightness(110%);
-         
-}
-     
- }   
 
     
 
 body {
-    width: 100%;
+    width: 100%;   
     margin: 0px;
     justify-content: center; 
     font-family : 'Roboto', sans-serif;
@@ -45,13 +36,16 @@ body {
                 
                 position: absolute;
                 bottom: 50%;
-                left: 40%;
+                left: 50%;
+                
                 border: 10px solid $coul-prim; 
                 border-top: 10px solid $coul-secon; 
                 border-radius: 50%;
                 width: 50px;
                 height: 50px;
                 animation: spin 2s linear infinite;
+                margin-top: -25px;
+                margin-left:-25px ;
                 
             }
                 @-webkit-keyframes spin {
@@ -67,7 +61,7 @@ body {
 header{
     display:flex;
     flex-direction: column;
-    
+   
     background-color:#F2F2F2;
     width: 100%;
     height: 450px; 
@@ -85,8 +79,7 @@ h1{
     display:flex;
     justify-content: center;
     background-color: white;
-    font-family : 'Shrikhand', cursive ;
-    
+    font-family : 'Shrikhand', cursive ;  
 }
 li
 {
@@ -125,11 +118,9 @@ li
     border-radius: 100px;
     color:white;    
     @include gradient;
-    cursor: pointer;
-    
-    box-shadow: 0 0px 20px 0px rgb(170,170,170);
-   
-        @include hover-button;
+    cursor: pointer;    
+    box-shadow: 0 0px 20px 0px rgb(170,170,170); 
+    @include hover-button;
 }
 .imgacc{
     max-width: 1445px;
@@ -151,8 +142,7 @@ nav {
         li
         {
             display: flex;
-            align-items:center;
-            
+            align-items:center;           
             width:330px;
             height: 60px;	 
             border-radius:25px;
@@ -174,8 +164,7 @@ nav {
     }
                     #nav{
                         padding-left: 0px;
-                        flex-flow: row wrap;
-                    
+                        flex-flow: row wrap;                   
                         display: flex;
                         justify-content: center;
                     }
@@ -282,7 +271,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 10px;
     margin:10px;
     width: 3px;
@@ -367,7 +355,6 @@ object-fit: cover;
     justify-content: center;
     flex-direction: column;
     margin-top: -91px;
- 
     width: 100%;
     background-color: #F2F2F2;
     border-radius: 45px 45px 0px 0px;
@@ -485,9 +472,6 @@ object-fit: cover;
      @include hover-button;
 }
 
-    
-   
-
 .button-comm{
     display:flex;
     justify-content: center;
@@ -520,18 +504,7 @@ object-fit: cover;
     align-items: center;
     justify-content: center;
 }
-@mixin hover-icon  {
-    opacity: 1;
-    width: 50px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 9%;
-    background-color: $vert;   
-    border-radius: 0px 15px 15px 0px;
-    transition-duration: 0.5s;
-    
-}
+
 .list2:hover > .icone-choix {
     
     @include hover-icon;
@@ -545,8 +518,7 @@ object-fit: cover;
     @include hover-icon;
 }
 .fa-check  {
-        position: absolute;
-        
+        position: absolute;      
         background-color: white;
         color: $vert; 
         padding: 3px;
@@ -589,5 +561,8 @@ object-fit: cover;
     .titrefonct h2{
         text-align: center;
     }
-
+    .spinner{
+        bottom: 50%;
+        left: 50%;
+    }
 }

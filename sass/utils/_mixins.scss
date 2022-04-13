@@ -1,0 +1,19 @@
+@mixin gradient {background-image: linear-gradient(339deg,$coul-prim,$coul-secon);}
+@mixin hover-button  {
+    &:hover {            
+    transition-duration: 0.90s;
+    box-shadow: 0 0px 20px 0px rgb(56, 55, 55);
+    filter:brightness(110%);}
+}   
+@mixin hover-icon  {
+    opacity: 1;
+    width: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9%;
+    background-color: $vert;   
+    border-radius: 0px 15px 15px 0px;
+    transition-duration: 0.5s;
+    
+}
